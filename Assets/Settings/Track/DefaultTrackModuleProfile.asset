@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1b51fe89ee16446a2a06ded1ede774, type: 3}
+  m_Name: DefaultTrackModuleProfile
+  m_EditorClassIdentifier: Assembly-CSharp::VRRoller.TrackModuleProfile
+  modulePrefab: {fileID: 1915301470481261, guid: 3aeff43134bc8f04f87ce0661cace669, type: 3}
+  moduleLengthMeters: 1
+  railGaugeMeters: 1
+  railRadiusMeters: 0.08
+  sleeperSpacingMeters: 0.5
+  sleeperSizeMeters: {x: 1.35, y: 0.12, z: 0.16}
+  minimumModuleLengthMeters: 0.15
+  maxTurnAnglePerModule: 4
