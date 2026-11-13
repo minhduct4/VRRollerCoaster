@@ -34,17 +34,17 @@ sysinfo.txt
 *.stackdump
 
 # Assets imported from packages and asset packs
-/[Aa]ssets/[Ss]amples/
-/[Aa]ssets/[Ss]amples.meta
-/[Aa]ssets/ADG_Textures/
-/[Aa]ssets/ADG_Textures.meta
-/[Aa]ssets/ALP_Assets/
-/[Aa]ssets/ALP_Assets.meta
-/[Aa]ssets/Fantasy Skybox FREE/
-/[Aa]ssets/Fantasy Skybox FREE.meta
-/[Aa]ssets/Forst/
-/[Aa]ssets/Forst.meta
-/[Aa]ssets/TerrainTexturesPackFree/
-/[Aa]ssets/TerrainTexturesPackFree.meta
-/[Aa]ssets/TrueTrackSystem/
-/[Aa]ssets/TrueTrackSystem.meta
+# /[Aa]ssets/[Ss]amples/
+# /[Aa]ssets/[Ss]amples.meta
+# /[Aa]ssets/ADG_Textures/
+# /[Aa]ssets/ADG_Textures.meta
+# /[Aa]ssets/ALP_Assets/
+# /[Aa]ssets/ALP_Assets.meta
+# /[Aa]ssets/Fantasy Skybox FREE/
+# /[Aa]ssets/Fantasy Skybox FREE.meta
+# /[Aa]ssets/Forst/
+# /[Aa]ssets/Forst.meta
+# /[Aa]ssets/TerrainTexturesPackFree/
+# /[Aa]ssets/TerrainTexturesPackFree.meta
+# /[Aa]ssets/TrueTrackSystem/
+# /[Aa]ssets/TrueTrackSystem.meta
