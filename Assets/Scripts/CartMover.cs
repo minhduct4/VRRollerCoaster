@@ -40,7 +40,7 @@ namespace VRRoller
 
         /// <summary>Tốc độ hiện tại của toa, tính bằng mét trên giây.</summary>
         public float CurrentSpeedMetersPerSecond => currentSpeedMetersPerSecond;
-
+        public float NormalizedTime => normalizedTime;
         void Start()
         {
             if (!TryRefreshTrackLength())

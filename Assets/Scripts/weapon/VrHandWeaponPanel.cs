@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,10 +17,10 @@ namespace VRRoller
         GameObject panelRoot;
 
         [SerializeField, Tooltip("Text hiển thị tên loại súng.")]
-        Text weaponNameLabel;
+        TextMeshProUGUI weaponNameLabel;
 
         [SerializeField, Tooltip("Text gợi ý nút A.")]
-        Text hintLabel;
+        TextMeshProUGUI hintLabel;
 
         [Header("Billboard")]
         [SerializeField, Tooltip("Xoay panel về phía camera HMD mỗi frame.")]
