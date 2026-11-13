@@ -133228,6 +133228,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRRoller.TrackModulePart
   module: {fileID: 606571396}
+--- !u!1 &519801264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519801265}
+  - component: {fileID: 519801266}
+  m_Layer: 0
+  m_Name: Left Hand Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &519801265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519801264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1294620889}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519801266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519801264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd28f881bcbf4143979a3a0a0ce9b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRRoller.VrHandControllerAnchor
+  handSide: 0
 --- !u!1 &519876210 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2192533197992097094, guid: 3aeff43134bc8f04f87ce0661cace669, type: 3}
@@ -213718,6 +213763,51 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 578869657}
   m_SourcePrefab: {fileID: 100100000, guid: 3aeff43134bc8f04f87ce0661cace669, type: 3}
+--- !u!1 &834761558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 834761559}
+  - component: {fileID: 834761560}
+  m_Layer: 0
+  m_Name: Right Hand Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &834761559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834761558}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1294620889}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &834761560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834761558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd28f881bcbf4143979a3a0a0ce9b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRRoller.VrHandControllerAnchor
+  handSide: 1
 --- !u!1 &834883808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 491053338185205431, guid: 3aeff43134bc8f04f87ce0661cace669, type: 3}
@@ -323490,6 +323580,8 @@ GameObject:
   - component: {fileID: 1294620889}
   - component: {fileID: 1294620891}
   - component: {fileID: 1294620890}
+  - component: {fileID: 1294620892}
+  - component: {fileID: 1294620893}
   m_Layer: 0
   m_Name: XR Origin (VR)
   m_TagString: Untagged
@@ -323511,6 +323603,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1025566534}
+  - {fileID: 519801265}
+  - {fileID: 834761559}
   m_Father: {fileID: 1934066629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1294620890
@@ -323543,6 +323637,50 @@ MonoBehaviour:
   m_CameraFloorOffsetObject: {fileID: 1025566533}
   m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.1176
+--- !u!114 &1294620892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294620888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19bd3a0b10d0374c8f71abccd8fe3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRRoller.VrHandControllerRig
+  leftHandAnchor: {fileID: 519801265}
+  rightHandAnchor: {fileID: 834761559}
+  controllerMaterial: {fileID: 0}
+  hideWhenUntracked: 1
+--- !u!114 &1294620893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294620888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cf36b5ff412934dae2533bf2f4716c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRRoller.VrHandWeaponLoadout
+  weaponSlots:
+  - displayName: Black short gun
+    weaponPrefab: {fileID: 4210100720165400533, guid: 87e308cb23eea97419b3c2623d8bb3fa, type: 3}
+    fallbackSilhouette: 0
+  - displayName: Silver short gun
+    weaponPrefab: {fileID: 7757947126742549135, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+    fallbackSilhouette: 0
+  - displayName: FN 57
+    weaponPrefab: {fileID: 6949219968297497114, guid: 55b1fd5f577255c4a8338b61385780ec, type: 3}
+    fallbackSilhouette: 0
+  defaultWeaponIndex: 0
+  leftGripLocalPosition: {x: 0, y: -0.052, z: 0}
+  leftGripLocalEuler: {x: 0, y: 0, z: 0}
+  rightGripLocalPosition: {x: 0, y: -0.052, z: 0}
+  rightGripLocalEuler: {x: 0, y: 0, z: 0}
+  handRig: {fileID: 0}
 --- !u!1 &1294692931 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 491053338185205431, guid: 3aeff43134bc8f04f87ce0661cace669, type: 3}
