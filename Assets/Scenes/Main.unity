@@ -243160,7 +243160,7 @@ GameObject:
   - component: {fileID: 956163980}
   - component: {fileID: 956163979}
   m_Layer: 5
-  m_Name: WeaponNameTxt
+  m_Name: InstructionTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323913,8 +323913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRRoller.VrHandWeaponPanel
   panelRoot: {fileID: 1501205355}
-  weaponNameLabel: {fileID: 956163979}
-  hintLabel: {fileID: 1927387551}
+  weaponNameLabel: {fileID: 1927387551}
+  hintLabel: {fileID: 956163979}
   faceMainCamera: 1
   weaponLoadout: {fileID: 1294620893}
   panelInput: {fileID: 1294620895}
@@ -373513,8 +373513,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 956163978}
   - {fileID: 1927387550}
+  - {fileID: 956163978}
   m_Father: {fileID: 1897499694}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -373551,7 +373551,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 5.16
 --- !u!222 &1501205358
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -469801,6 +469801,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRRoller.TrackModulePart
   module: {fileID: 220544231}
+--- !u!1 &1881930302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1881930304}
+  - component: {fileID: 1881930303}
+  m_Layer: 0
+  m_Name: TargetSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1881930303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881930302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8e23458e146cb46bef4f59696f2e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRRoller.TargetSpawner
+  track: {fileID: 1717701771}
+  cart: {fileID: 1934066625}
+  targetPrefab: {fileID: 6017944895332231529, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+  spawnAheadMeters: 50
+  despawnBehindMeters: 15
+  minSpacingMeters: 8
+  maxSpacingMeters: 20
+  minLateral: -3
+  maxLateral: 3
+  minHeight: 1
+  maxHeight: 3
+  minScale: 0.8
+  maxScale: 1.5
+  randomSeed: 0
+--- !u!4 &1881930304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881930302}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.19854, y: -34.17752, z: 76.4954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1881933560 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 491053338185205431, guid: 3aeff43134bc8f04f87ce0661cace669, type: 3}
@@ -481879,7 +481937,7 @@ GameObject:
   - component: {fileID: 1927387552}
   - component: {fileID: 1927387551}
   m_Layer: 5
-  m_Name: InstructionTxt
+  m_Name: WeaponNameTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483928,6 +483986,7 @@ GameObject:
   - component: {fileID: 1934066630}
   - component: {fileID: 1934066631}
   - component: {fileID: 1934066632}
+  - component: {fileID: 1934066633}
   m_Layer: 0
   m_Name: Cart
   m_TagString: Untagged
@@ -483948,10 +484007,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRRoller.Teaching.Phase2.CartMover
   track: {fileID: 1717701771}
-  cruiseSpeed: 25.2
-  minSpeed: 13.8
-  maxSpeed: 39.5
-  slopeInfluence: 24.7
+  cruiseSpeed: 10.2
+  minSpeed: 8.8
+  maxSpeed: 25.5
+  slopeInfluence: 20.5
 --- !u!65 &1934066626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -484093,6 +484152,28 @@ MonoBehaviour:
   responseExponent: 0.65
   vignetteSmoothness: 0.48
   intensitySmoothTime: 0.2
+--- !u!114 &1934066633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934066624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 507f4dac48cbb5045bb70563dbe94534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRRoller.GunShooter
+  leftHandAnchor: {fileID: 0}
+  rightHandAnchor: {fileID: 0}
+  bulletPrefab: {fileID: 1122964723992546, guid: 674adf642abf5614aae2995443c8250f, type: 3}
+  bulletSpeed: 40
+  bulletLifetime: 4.46
+  fireCooldown: 0.25
+  continuousFire: 1
+  fpShootOrigin: {fileID: 0}
+  enableFpShooting: 1
+  fallbackMuzzleLocalOffset: {x: 0, y: 0, z: 0.3}
 --- !u!1 &1934348463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7123276710612450072, guid: 3aeff43134bc8f04f87ce0661cace669, type: 3}
@@ -539099,6 +539180,63 @@ MonoBehaviour:
   sourceModuleLengthMeters: 1
   sleeperCount: 2
   sleeperWidthMeters: 1.35
+--- !u!1001 &2822228910148145704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6017944895332231529, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_Name
+      value: ShootingTarget
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.04032
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -33.967
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 76.39392
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399571450513552339, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c557283ed7487a4439fef2c3327ef3f8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -539110,3 +539248,5 @@ SceneRoots:
   - {fileID: 1336872384}
   - {fileID: 485261997}
   - {fileID: 388718497}
+  - {fileID: 2822228910148145704}
+  - {fileID: 1881930304}
